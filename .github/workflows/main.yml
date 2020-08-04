@@ -14,10 +14,10 @@ jobs:
         - uses: actions/checkout@v1
         - uses: ./action-a
         with:
-          MY_NAME: "Mona"
-    build:
-      name: Build CMake
-      runs-on: ubuntu-latest
-      steps:
-      - uses: ashutoshvarma/action-cmake-build@v1
-      - uses: ./action-a
+          MY_NAME: "Jerry"
+#    build:
+#      name: Build CMake
+#      runs-on: ubuntu-latest
+#      steps:
+#      - uses: ashutoshvarma/action-cmake-build@v1
+#      - uses: ./action-a
