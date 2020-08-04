@@ -11,13 +11,14 @@ jobs:
       name: Hello world action plus cmake
       runs-on: ubuntu-latest
       steps:
-        - name: "Default"
-        - uses: actions/checkout@v1
-        - uses: ./action-a
+        - name: "Chekout"
+          uses: actions/checkout@v1
+
+        - name: "Default sh script"
+          uses: ./action-a
           with:
             MY_NAME: "Jerry"
 
         - name: "Build CMake"
-        - uses: actions/checkout@v1
-        - uses: ashutoshvarma/action-cmake-build@v1
+          uses: ashutoshvarma/action-cmake-build@v1
 
