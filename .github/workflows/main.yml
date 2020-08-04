@@ -8,16 +8,16 @@ name: CI
       - master
 jobs:
     build:
-      name: Hello world action
+      name: Hello world action plus cmake
       runs-on: ubuntu-latest
       steps:
+        - name: "Default"
         - uses: actions/checkout@v1
         - uses: ./action-a
           with:
             MY_NAME: "Jerry"
-#    build:
-#      name: Build CMake
-#      runs-on: ubuntu-latest
-#      steps:
-#      - uses: ashutoshvarma/action-cmake-build@v1
-#      - uses: ./action-a
+
+        - name: "Build CMake"
+          uses: actions/checkout@v1
+          uses: ashutoshvarma/action-cmake-build@v1
+
