@@ -18,6 +18,6 @@ jobs:
             MY_NAME: "Jerry"
 
         - name: "Build CMake"
-          uses: actions/checkout@v1
-          uses: ashutoshvarma/action-cmake-build@v1
+        - uses: actions/checkout@v1
+        - uses: ashutoshvarma/action-cmake-build@v1
 
