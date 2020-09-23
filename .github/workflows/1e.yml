@@ -1,0 +1,27 @@
+name: 1ES Build Accelerator Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+  - cron: "0 1 * * *"
+
+jobs:
+  
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: "1ES Build Acclerator"
+      uses: actions/1es-build-accelerator@v1
+      with:
+        # buildengine options: auto | msbuild | cmake | quickbuild | buildxl
+        buildengine: "auto"
+        # accelerator options: auto | anybuild | cloudbuild
+        accelerator: "auto"
+
+        accelerator: "auto | anybuild | cloudbuild"
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
