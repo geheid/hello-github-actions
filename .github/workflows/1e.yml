@@ -18,10 +18,8 @@ jobs:
     - name: "1ES Build Acclerator"
       uses: actions/1es-build-accelerator@v1
       with:
-        # buildengine options: auto | msbuild | cmake | quickbuild | buildxl
+        # buildengine options: auto | msbuild | quickbuild | buildxl
         buildengine: "auto"
         # accelerator options: auto | anybuild | cloudbuild
         accelerator: "auto"
-
-        accelerator: "auto | anybuild | cloudbuild"
         repo-token: ${{ secrets.GITHUB_TOKEN }}
